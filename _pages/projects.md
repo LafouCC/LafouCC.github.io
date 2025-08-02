@@ -8,7 +8,7 @@ nav_order: 3
 display_categories: [work, fun]
 horizontal: false
 ---
-
+{% comment %}
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
@@ -63,3 +63,6 @@ horizontal: false
   {% endif %}
 {% endif %}
 </div>
+{% endcomment %}
+
+<p><em>Projects coming soon...</em></p>
