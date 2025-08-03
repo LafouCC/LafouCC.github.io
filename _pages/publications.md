@@ -1,21 +1,11 @@
 ---
 layout: page
 permalink: /publications/
-title: publications
+title: Publications
 description: 
 nav: true
 nav_order: 2
 ---
 
-<!-- _pages/publications.md -->
+<p><em>Publications coming soon. Please check back later.</em></p>
 
-<!-- Bibsearch Feature -->
-
-<!-- {% include bib_search.liquid %} -->
-
-<!-- <div class="publications"> -->
-
-<!-- {% bibliography %} -->
-<p><em>Publication coming soon...</em></p>
-
-<!-- </div> -->

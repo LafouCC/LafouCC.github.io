@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: legally known as 谢林汐 (Linxi Xie)
 
