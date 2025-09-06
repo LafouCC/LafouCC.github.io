@@ -1,11 +1,20 @@
 ---
 layout: page
 permalink: /publications/
-title: Publications
-description: 
+title: publications
+description: "* denotes equal contribution."
 nav: true
 nav_order: 2
 ---
 
-<p><em>Publications coming soon. Please check back later.</em></p>
+<!-- _pages/publications.md -->
 
+<!-- Bibsearch Feature -->
+
+{% include bib_search.liquid %}
+
+<div class="publications">
+
+{% bibliography %}
+
+</div>
