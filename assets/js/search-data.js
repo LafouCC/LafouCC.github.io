@@ -10,8 +10,8 @@ ninja.data = [{
       window.location.href = "/";
     },
   },{id: "nav-publications",
-          title: "Publications",
-          description: "",
+          title: "publications",
+          description: "* denotes equal contribution.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -40,6 +40,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-my-homepage-is-online-sunglasses",
           title: 'My homepage is online. :sunglasses:',
+          description: "",
+          section: "News",},{id: "news-my-paper-is-accepted-to-emnlp-findings",
+          title: 'My paper is accepted to EMNLP Findings',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
