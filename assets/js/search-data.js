@@ -30,12 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-my-first-paper-is-accepted-to-iccv-2025-sparkles",
+        },{id: "news-my-first-paper-is-accepted-to-iccv-2025-sparkles",
           title: 'My first paper is accepted to ICCV 2025! :sparkles:',
           description: "",
           section: "News",},{id: "news-my-homepage-is-online-sunglasses",
