@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-6-26
+date: 2025-8-21
 inline: true
 related_posts: false
 ---
 
-My first paper is accepted to ICCV 2025! :sparkles:
+My paper is accepted to EMNLP Findings

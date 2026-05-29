@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-8-21
+date: 2026-4-1
 inline: true
 related_posts: false
 ---
 
-My paper is accepted to EMNLP Findings
+One paper accepted to CVPR Findings, many thanks to all collaborators :purple_heart:

@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-8-2
+date: 2025-6-26
 inline: true
 related_posts: false
 ---
 
-My homepage is online. :sunglasses:
+My first paper is accepted to ICCV 2025! :sparkles:
