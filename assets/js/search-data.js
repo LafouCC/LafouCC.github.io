@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-tutoring",
-          title: "Tutoring",
-          description: "I served as a learning assistant for the following courses.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
         },{id: "news-my-first-paper-is-accepted-to-iccv-2025-sparkles",
           title: 'My first paper is accepted to ICCV 2025! :sparkles:',
           description: "",
@@ -38,6 +31,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-one-paper-accepted-to-cvpr-findings-many-thanks-to-all-collaborators-purple-heart",
           title: 'One paper accepted to CVPR Findings, many thanks to all collaborators :purple_heart:',
+          description: "",
+          section: "News",},{id: "news-started-my-ph-d-journey-at-ut-see-you-in-austin",
+          title: 'Started my Ph.D. journey at UT, see you in Austin!',
           description: "",
           section: "News",},{
       id: 'light-theme',
