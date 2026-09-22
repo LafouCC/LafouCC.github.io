@@ -26,6 +26,16 @@ latest_posts:
 
 Hi! I’m a first year Ph.D. student at [The University of Texas at Austin](https://www.utexas.edu/), co-advised by [Prof. Guandao Yang](https://www.guandaoyang.com/) and [Prof. Atlas Wang](https://www.vita-group.space/pi). Previously, I obtained a B.S. in Computer Science from [New York University Shanghai](https://shanghai.nyu.edu/) and [New York University](https://www.nyu.edu/).
 
-I have been fortunate to work with [Prof. Hongyi Wen](https://whongyi.github.io/) and [Prof. Shengjie Wang](https://sheng-jie-wang.github.io/) on personalization of diffusion models and machine unlearning for mitigating undesirable data influence in LLMs. I was also a Visiting Student Researcher at the Stanford Computational Imaging Lab, advised by [Prof. Gordon Wetzstein](https://stanford.edu/~gordonwz/), where I worked on video world models. Broadly, my interests lie in **controllability and personalization in generative models**.
+I was fortunate to work with [Prof. Hongyi Wen](https://whongyi.github.io/) and [Prof. Shengjie Wang](https://sheng-jie-wang.github.io/) on personalization of diffusion models and machine unlearning for mitigating undesirable data influence in LLMs. I was also a Visiting Student Researcher at the Stanford Computational Imaging Lab, advised by [Prof. Gordon Wetzstein](https://stanford.edu/~gordonwz/), where I worked on video world models.
 
 Outside of research, I am a classically trained flutist and enjoy badminton and diving.
+
+<!-- Keep this wrapper: it is what turns the list below into the highlighted block. -->
+<div class="callout research-focus" markdown="1">
+
+Broadly, my current research centers on two interconnected interests:
+
+1. **Understanding human minds**: How can we model human intentions and evolving preferences through multimodal signals and ongoing interactions?
+2. **Aligning generative models**: How can we use this understanding to make generative models controllable and adaptive to individual needs?
+
+</div>

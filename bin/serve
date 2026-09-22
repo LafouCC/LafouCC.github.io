@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+#
+# Serve the site locally at http://localhost:4000 with live reload.
+#
+#   ./bin/serve
+#
+# One-time setup (macOS, no Homebrew or Docker needed -- uses the miniforge
+# install already on this machine):
+#
+#   mamba create -y -n afolio -c conda-forge ruby=3.3 imagemagick nodejs compilers pkg-config
+#   PATH="$HOME/miniforge3/envs/afolio/bin:$PATH" gem install bundler:2.6.9 --no-document
+#   PATH="$HOME/miniforge3/envs/afolio/bin:$PATH" bundle config set --local path vendor/bundle
+#   PATH="$HOME/miniforge3/envs/afolio/bin:$PATH" bundle install
+#
+# conda-forge's libheif ships linked against a Homebrew path that does not exist
+# on this machine, which makes ImageMagick abort on startup and stops
+# jekyll-imagemagick from generating the responsive .webp variants. If the
+# environment is ever recreated, repoint that reference once:
+#
+#   E="$HOME/miniforge3/envs/afolio"
+#   install_name_tool -change /opt/homebrew/opt/webp/lib/libsharpyuv.0.dylib \
+#     "$E/lib/libsharpyuv.0.dylib" "$E"/lib/libheif.1.*.dylib
+#   codesign -f -s - "$E"/lib/libheif.1.*.dylib
+#
+# System Ruby (2.6) is too old for this Gemfile, which is why the site is built
+# from the conda environment instead.
+
+set -euo pipefail
+
+ENV_DIR="${AFOLIO_ENV_DIR:-$HOME/miniforge3/envs/afolio}"
+
+if [ ! -x "$ENV_DIR/bin/ruby" ]; then
+  echo "No Ruby found in $ENV_DIR -- see the setup steps at the top of this script." >&2
+  exit 1
+fi
+
+export PATH="$ENV_DIR/bin:$PATH"
+
+cd "$(dirname "$0")/.."
+exec bundle exec jekyll serve --livereload --host 127.0.0.1 --port 4000 "$@"

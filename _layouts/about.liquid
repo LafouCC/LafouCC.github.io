@@ -15,53 +15,92 @@ layout: default
   </header>
 
   <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+    <!-- Intro: portrait floats beside the bio; block-level content in the page
+         body (e.g. a .callout) clears it and spans the full width. -->
+    <div class="about-intro">
+      {% if page.profile %}
+        <div class="profile profile-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% if page.profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+            {% endif %}
+            {% assign profile_width = site.max_width | minus: 30 | times: 0.28 | round %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) {{ profile_width }}px, (min-width: 576px) 28vw, 95vw{% endcapture %}
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
+          {% if page.profile.more_info %}
+            <div class="more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+      <div class="about-intro-text">{{ content }}</div>
+    </div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section class="page-section">
+        <h2 class="section-title">
+          <a href="{{ '/news/' | relative_url }}">News</a>
+        </h2>
+        {% include news.liquid limit=true %}
+      </section>
+    {% endif %}
+
+    <!-- Research -->
+    {% if page.selected_papers %}
+      <section class="page-section">
+        <h2 class="section-title">
+          <a href="{{ '/publications/' | relative_url }}">Research</a>
+        </h2>
+        {% include selected_papers.liquid %}
+      </section>
+    {% endif %}
+
+    <!-- Experience -->
+    {% if site.data.experience %}
+      <section class="page-section">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience">
+          {% for item in site.data.experience %}
+            <div class="experience-item">
+              <div class="experience-date">{{ item.date }}</div>
+              <div class="experience-body">
+                <h3 class="experience-role">
+                  {{ item.role }} @
+                  {% if item.url %}
+                    <a href="{{ item.url }}">{{ item.institution }}</a>
+                  {% else %}
+                    {{ item.institution }}
+                  {% endif %}
+                </h3>
+                {% if item.advisor %}
+                  <p class="experience-advisor">Advisor: {{ item.advisor }}</p>
+                {% endif %}
+                {% if item.focus %}
+                  <p class="experience-focus">{{ item.focus }}</p>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
     {% endif %}
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
+      <section class="page-section">
+        <h2 class="section-title">
+          <a href="{{ '/blog/' | relative_url }}">Latest posts</a>
+        </h2>
+        {% include latest_posts.liquid %}
+      </section>
     {% endif %}
 
     <!-- Social -->

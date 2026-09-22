@@ -1,0 +1,29 @@
+# Experience entries rendered by the "Experience" section of _layouts/about.liquid.
+# Listed most recent first. `url`, `advisor` and `focus` are all optional.
+- date: Aug 2026 - Present
+  role: Graduate Research Assistant
+  institution: The University of Texas at Austin
+  url: https://www.cs.utexas.edu/
+  advisor: Prof. Guandao Yang and Prof. Atlas Wang
+  focus: Personalization in generative models.
+
+- date: Summer 2026
+  role: Research Intern
+  institution: Tencent
+  url: https://www.tencent.com/en-us/
+  advisor: Dr. Kai Wang
+  focus: Parameter generation for personalized LLM.
+
+- date: Summer 2025
+  role: Visiting Student Researcher
+  institution: Stanford Computational Imaging Lab
+  url: https://www.computationalimaging.org/
+  advisor: Prof. Gordon Wetzstein
+  focus: Video world models with hand and camera control.
+
+- date: 2024 - 2026
+  role: Undergraduate Research Assistant
+  institution: New York University Shanghai
+  url: https://shanghai.nyu.edu/
+  advisor: Prof. Hongyi Wen and Prof. Shengjie Wang
+  focus: Personalization of diffusion models and machine unlearning for LLMs.

@@ -50,3 +50,18 @@ $back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
+
+// Typography
+// Body/heading face is Jost (geometric sans), monospace is JetBrains Mono.
+// Both are pulled in via site.third_party_libraries.google_fonts in _config.yml.
+$font-sans:
+  "Jost",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  helvetica,
+  sans-serif !default;
+$font-mono: "JetBrains Mono", ui-monospace, sfmono-regular, menlo, monospace !default;
+
+// Vertical rhythm shared by every section block on a page
+$section-gap: 3.25rem !default;

@@ -19,6 +19,9 @@
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{$white-color};
+  --global-callout-bg-color: #{rgba($purple-color, 0.055)};
+  --global-callout-border-color: #{rgba($purple-color, 0.12)};
+  --global-callout-shadow: 0 6px 20px rgba(0, 0, 0, 0.09), 0 1px 3px rgba(0, 0, 0, 0.05);
   --global-highlight-color: #{$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
@@ -91,6 +94,9 @@ html[data-theme="dark"] {
   --global-distill-app-color: #{$grey-color-light};
   --global-divider-color: #424246;
   --global-card-bg-color: #{$grey-900};
+  --global-callout-bg-color: #{rgba($cyan-color, 0.1)};
+  --global-callout-border-color: #{rgba($cyan-color, 0.24)};
+  --global-callout-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.3);
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},
