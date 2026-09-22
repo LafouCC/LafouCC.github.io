@@ -43,7 +43,10 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      # The stylesheet sources live in _sass, not assets/_sass. Pointing at a
+      # directory that does not exist made this hash MD5("") on every build, so
+      # the main.css URL never changed and browsers served a stale stylesheet.
+      CacheDigester.new(file_name: file_name, directory: '_sass').digest!
     end
   end
 end
