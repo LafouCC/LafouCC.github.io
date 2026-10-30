@@ -1,5 +1,10 @@
 # Experience entries rendered by the "Experience" section of _layouts/about.liquid.
 # Listed most recent first. `url`, `advisor` and `focus` are all optional.
+- date: Oct 2026 - Present
+  role: Graduate Research Fellow
+  institution: Aesona
+  focus: General-purpose user representation.
+
 - date: Aug 2026 - Present
   role: Graduate Research Assistant
   institution: The University of Texas at Austin
